@@ -1,0 +1,18 @@
+<h1>Update <%= @parcel.name() %></h1>
+
+<form action="/parcels/<%= @parcel.id() %>">
+  <input name="_method" type="hidden" value="patch">
+
+  <label for="name">Rename parcel</label>
+  <input id="name" name="name" type="text">
+
+  <button type="submit">Update</button>
+</form>
+
+<form action="/parcels/<%= @parcel.id() %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+
+  <button type="submit">Delete parcel</button>
+</form>
+
+<p><a href="/parcels">Return to parcel list</a></p>
